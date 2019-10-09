@@ -2,21 +2,11 @@ let TEST_MODE;
 let HOST;
 let confs;
 
-const SOC = "test";
-
 TEST_MODE = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development');
 
 function getHost() {
   if (TEST_MODE) {
-    switch (SOC) {
-      case 'test':
-        HOST = 'localhost';
-        break;
-      case 'prod':
-        HOST = 'doselec.ilsduc.fr';
-        break;
-
-    }
+    HOST = "dev";
   } else {
     HOST = window.location.hostname;
   }
@@ -27,9 +17,9 @@ function getHost() {
 */
 function getConfigurations (host) {
   switch (host) {
-    case "localhost":
+    case "development.fr", "localhost":
       confs = {
-        URL_API: "http://localhost/api",
+        URL_API: "http://development.fr/api",
         FAVICON: '/logo.png',
         TITLE: 'Reporting',
         META_NAME_CONTENT: '#000',
@@ -38,17 +28,30 @@ function getConfigurations (host) {
         SITE_MARCHAND: 'https://www.doselec.com/fr/'
       };
       break;
-    case "reporting.picourt-cabis.fr":
+      //
+    case "prod":
       confs = {
-        URL_API: "https://reporting.picourt-cabis.fr/api",
+        URL_API: "http://mondomaine.fr/api",
         FAVICON: '/logo.png',
         TITLE: 'Reporting',
-        META_NAME_CONTENT: '#346eeb',
+        META_NAME_CONTENT: '#000',
         MANIFEST: '/manifest.json',
-        PRIMARY_BG: '#346eeb',
+        PRIMARY_BG: '#000',
         SITE_MARCHAND: 'https://www.doselec.com/fr/'
       };
       break;
+    default:
+      confs = {
+        URL_API: "http://development.fr/api",
+        FAVICON: '/logo.png',
+        TITLE: 'Reporting',
+        META_NAME_CONTENT: '#000',
+        MANIFEST: '/manifest.json',
+        PRIMARY_BG: '#000',
+        SITE_MARCHAND: 'https://www.doselec.com/fr/'
+      };
+      break;
+
   }
 }
 
