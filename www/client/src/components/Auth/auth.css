@@ -1,0 +1,13 @@
+#auth-login {
+  animation: slide-up .225s ease;
+  min-height: 100vh;
+  background: #e4e4e4;
+}
+#auth-login .show {
+  animation: slide-up .225s ease;
+}
+
+@keyframes slide-up {
+  from { transform: translateY(150%); }
+  to { transform: translateY(0%); }
+}

@@ -1,0 +1,23 @@
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+span.ripple--span {
+  position: absolute;
+  cursor: pointer;
+  /* background: rgba(210, 104, 218, .2); */
+  /* background: rgba( 255, 255, 255, .3); */
+  background: rgba( 0, 0, 0, .15);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple .55s linear;
+}
+
+@keyframes ripple {
+  to {
+    opacity: 0;
+    transform: scale(4);
+  }
+}

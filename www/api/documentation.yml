@@ -1,0 +1,15 @@
+Login_user:
+  title: My endpoint title
+  description: Description of what my endpoint do.
+  parameters:
+    path:               # ACCEPT path | query | form_data | body | headers
+      name: id
+      type: string      # ACCEPT string | number | integer | boolean | array | object
+      description:  Description of what this parameter means.
+      required: true    # ACCEPT true | false
+  protected_by:
+    type: JWT           # Type of protection
+    name: user_token    # Proctection name
+  returns:              # If blank, and fill in Schema, it can be autogenerate
+    id: string
+    field_name: <type>  # ACCEPT string | number | integer | boolean | array | object

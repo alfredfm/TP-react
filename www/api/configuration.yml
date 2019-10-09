@@ -1,0 +1,6 @@
+localhost:
+  driver: mysql
+  host: web_database
+  dbname: alfredfm
+  username: root
+  password: password

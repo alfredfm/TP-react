@@ -1,0 +1,101 @@
+.dropdown-overlay--ilsduc{
+  display: none;
+}
+.dropdown-overlay--ilsduc.active{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+}
+
+.dropdown-container--ilsduc {
+  position: relative;
+}
+
+.dropdown-menu--ilsduc {
+  display: none;
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+  background: white;
+  /* border-radius: 5px; */
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,.125);
+  transition: all .115s ease;
+}
+.dropdown-menu--ilsduc.active {
+  position: absolute;
+  display: block;
+  opacity: 1;
+  top: 0;
+  right: 0;
+  z-index: 51;
+  transform: translateY(0);
+}
+.dropdown-menu--ilsduc.active a {
+  padding: .5rem;
+  text-decoration: none !important;
+  color: rgba(0,0,0,.7) !important;
+}
+.dropdown-menu--ilsduc.active a:hover {
+  background: rgba(0,0,0,.115) !important;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #ffffff;
+  /* min-width: 160px; */
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+  /* border-radius: 5px; */
+  /* display: none; */
+  padding: .5rem 0;
+  top: 0px;
+  right: 0;
+  transition: all .225s ease;
+  transform: translateY(-100%);
+  z-index: -10;
+  opacity: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  max-width: 170px;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: rgba(0,0,0,.7) !important;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+.dropdown-content a:hover {
+  text-decoration: none;
+  color: rgba(0,0,0,.7) !important;
+  background: rgba(0,0,0,.115) !important;
+}
+.dropdown--link-header {
+  padding: .5rem;
+  font-size: .9rem;
+  color: rgba(0,0,0,.5) !important;
+
+}
+.dropdown.active .dropdown-content {
+  z-index: 51;
+  /* display: block; */
+  opacity: 1;
+  transform: translateY(0%);
+}

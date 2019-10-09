@@ -1,0 +1,44 @@
+.snackbar {
+  position: fixed;
+  max-width: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: all .225s ease;
+  z-index: 1500;
+}
+
+.snackbar .snackbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.snackbar .snackbar-container.float {
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+}
+
+.snackbar a {
+  text-decoration: none;
+}
+
+.snackbar.show {
+  animation: show 3s;
+}
+
+
+@keyframes show {
+  10% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}

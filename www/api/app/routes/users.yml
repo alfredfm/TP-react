@@ -1,0 +1,18 @@
+# Register a user
+/users/register:
+  post:
+    doc_name: Login_user
+    action: \App\App\Controllers\UserController@register
+    required:
+      post: [ firstname, lastname, email, password, password-confirm, timezone ]
+# Login a user
+/users/login:
+  post:
+    action: \App\App\Controllers\UserController@login
+    required:
+      post: [ email, password ]
+
+# Retrieve all users.
+/users/test:
+  get:
+    action: \App\App\Controllers\UserController@test

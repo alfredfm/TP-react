@@ -1,0 +1,4 @@
+Users:
+  route_file: /routes/users.yml
+  prefix: /users
+

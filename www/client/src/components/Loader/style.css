@@ -1,0 +1,55 @@
+.loader-large-circle {
+  position: relative;
+  animation-name: zoomIn;
+  animation-duration: .7s;
+  /* background: rgba(200,200,200,.4); */
+  width: 30px;
+  height: 30px;
+  border-radius: 500px;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+.loader-small-circle {
+  position: absolute;
+  animation-name: zoomOut;
+  animation-duration: .7s;
+  background: rgba(200,200,200,1);
+  width: 30px;
+  height: 30px;
+  border-radius: 500px;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+.loader-extra-small-circle {
+  position: relative;
+  animation-name: radar;
+  animation-duration: 1.4;
+  animation-delay: .6s;
+  /* background: rgb(200,200,200); */
+  opacity: (0.5);
+  width: 30px;
+  height: 30px;
+  border-radius: 500px;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+
+@keyframes zoomIn {
+  from {transform: scale(.5);}
+  to {transform: scale(1);}
+}
+
+@keyframes radar {
+  from {opacity: 1; transform: scale(1);}
+  to {opacity: 0;transform: scale(8);}
+}
+
+@keyframes zoomOut {
+  from {transform: scale(1);}
+  to {transform: scale(0);}
+}

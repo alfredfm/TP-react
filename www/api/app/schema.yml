@@ -1,0 +1,39 @@
+---
+User:
+  primary_key: id
+  unique_columns: []
+  description:
+    id: '{"type":"int(11)","is_nullable":false,"max_length":0,"auto_increment":true}'
+    account_type: '{"type":"varchar(20)","is_nullable":false,"max_length":"20","auto_increment":false}'
+    email: '{"type":"varchar(255)","is_nullable":false,"max_length":"255","auto_increment":false}'
+    username: '{"type":"varchar(100)","is_nullable":false,"max_length":"100","auto_increment":false}'
+    password: '{"type":"varchar(200)","is_nullable":false,"max_length":"200","auto_increment":false}'
+    firstname: '{"type":"varchar(100)","is_nullable":false,"max_length":"100","auto_increment":false}'
+    lastname: '{"type":"varchar(100)","is_nullable":false,"max_length":"100","auto_increment":false}'
+    package_id: '{"type":"int(11)","is_nullable":false,"max_length":0,"auto_increment":false}'
+    package_subscription: '{"type":"tinyint(1)","is_nullable":false,"max_length":0,"auto_increment":false}'
+    settings: '{"type":"text","is_nullable":false,"max_length":"65535","auto_increment":false}'
+    preferences: '{"type":"text","is_nullable":false,"max_length":"65535","auto_increment":false}'
+    is_active: '{"type":"int(11)","is_nullable":false,"max_length":0,"auto_increment":false}'
+    expire_date: '{"type":"datetime","is_nullable":false,"max_length":0,"auto_increment":false}'
+    date: '{"type":"datetime","is_nullable":false,"max_length":0,"auto_increment":false}'
+    data: '{"type":"text","is_nullable":false,"max_length":"65535","auto_increment":false}'
+  relations:
+    user_has_many_account:
+      type: has_many
+      ressource: App\App\Entities\Account
+      column_name: user_id
+      mapped_by: accounts
+    user_has_many_caption:
+      type: has_many
+      ressource: App\App\Entities\Caption
+      column_name: user_id
+      mapped_by: captions
+    user_has_many_post:
+      type: has_many
+      ressource: App\App\Entities\Post
+      column_name: user_id
+      mapped_by: posts
+  exposed: []
+  bindings: []
+...

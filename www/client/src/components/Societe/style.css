@@ -1,0 +1,27 @@
+.row-cell {
+  min-width: 150px;
+}
+
+.row-cell i.up {
+  transform: rotate(-45deg);
+}
+
+.row-cell i.down {
+  transform: rotate(45deg);
+}
+
+.vertical-align-bottom {
+  vertical-align: bottom !important;
+}
+
+input#societe-name {
+  border: none;
+  width: 100%;
+  padding: .5rem 0;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  font-size: 1.3rem;
+}
+input#societe-name:focus {
+  border-width: 2px;
+}
