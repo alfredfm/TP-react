@@ -1,0 +1,6 @@
+[submodule "www/api/bin"]
+	path = www/api/bin
+	url = https://github.com/alfredfm/api-culture-cli.git
+[submodule "www/api/core"]
+	path = www/api/core
+	url = https://github.com/alfredfm/api-culture-core.git
