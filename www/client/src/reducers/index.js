@@ -6,15 +6,11 @@ import snackbarReducer from '../lib/Snackbar/reducer';
 import dropdownReducer from '../lib/Dropdown/reducer';
 import societeReducer from '../components/Societe/reducer';
 import usersReducer from '../components/Users/reducer';
+import counterReducer from '../TPComponents/Counter/reducer';
 
 const createReducer = asyncReducers =>
   combineReducers({
-    swipeViews: swipeViewsReducer,
-    auth: authReducer,
-    snackbar: snackbarReducer,
-    dropdowns: dropdownReducer,
-    societes: societeReducer,
-    users: usersReducer,
+    counter: counterReducer,
   });
 
 export default createReducer;

@@ -2,7 +2,7 @@
 
 export const loadState = () => {
   try {
-    let serializedState = localStorage.getItem('brainjuice.$be5e5zjffd1c5s');
+    let serializedState = localStorage.getItem('alfredfm.ef595dd49g4ergr');
     if (serializedState === null) {
       return undefined;
     }
@@ -21,7 +21,7 @@ export const loadState = () => {
 export const saveState = (state) => {
   try {
     const serializedState = JSON.stringify(state);
-    localStorage.setItem('brainjuice.$be5e5zjffd1c5s', serializedState);
+    localStorage.setItem('alfredfm.ef595dd49g4ergr', serializedState);
   } catch {
     // ignore write errors
   }
