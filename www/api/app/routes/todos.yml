@@ -1,0 +1,5 @@
+/todos:
+  get:
+    action: App\App\Controllers\TodoController@getTodos
+  post:
+    action: App\App\Controllers\TodoController@postTodo

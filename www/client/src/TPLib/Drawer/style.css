@@ -1,0 +1,70 @@
+ilsduc--drawer .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+}
+
+.ilsduc--drawer.open .backdrop {
+    background-color: rgba(0,0,0,.5);
+    z-index: 1000;
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+}
+
+.ilsduc--drawer .drawer {
+    position: fixed;
+    background-color: white;
+    z-index: 1001;
+    transition: all .225s ease;
+}
+
+.ilsduc--drawer.left .drawer {
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    transform: translateX(-100%);
+    overflow-Y: scroll;
+}
+
+.ilsduc--drawer.top .drawer {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 300px;
+    transform: translateY(-100%);
+    overflow-X: scroll;
+}
+
+.ilsduc--drawer.bottom .drawer {
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 300px;
+    transform: translateY(100%);
+    overflow-X: scroll;
+}
+
+.ilsduc--drawer.right .drawer {
+    top: 0;
+    right: 0;
+    min-width: 300px;
+    height: 100vh;
+    transform: translateX(100%);
+    overflow-Y: scroll;
+}
+
+.ilsduc--drawer.open.left .drawer,
+.ilsduc--drawer.open.right .drawer
+{
+    transform: translateX(0);
+}
+
+.ilsduc--drawer.open.top .drawer,
+.ilsduc--drawer.open.bottom .drawer
+{
+    transform: translateX(0);
+}

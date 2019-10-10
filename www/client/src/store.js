@@ -43,8 +43,6 @@ export const initializeStore = () => {
 
 };
 
-
-
 function getMiddleWare() {
   if ((!process.env.NODE_ENV || process.env.NODE_ENV === 'development') /*&& !isMobile()*/) {
     return compose(

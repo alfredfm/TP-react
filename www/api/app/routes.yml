@@ -2,3 +2,7 @@ Users:
   route_file: /routes/users.yml
   prefix: /users
 
+Todo:
+  route_file: /routes/todos.yml
+  prefix: /todos
+

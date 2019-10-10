@@ -5,11 +5,10 @@ import App from './App';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { initializeStore, initializeSagas } from './store';
-
 // init store
 const store = initializeStore();
 // // init sagas
-// initializeSagas();
+initializeSagas();
 // render application
 ReactDOM.render(
     <Provider store={store}>
@@ -20,4 +19,4 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.register();
+serviceWorker.unregister();

@@ -1,6 +1,6 @@
 localhost:
   driver: mysql
   host: web_database
-  dbname: alfredfm
+  dbname: api
   username: root
   password: password

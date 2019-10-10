@@ -1,6 +1,7 @@
 import {
     INCREMENT_COUNTER,
-    DECREMENT_COUNTER
+    DECREMENT_COUNTER,
+    INIT_COUNTER,
 } from "./actions";
 
 const initialState = {
@@ -17,6 +18,9 @@ export default function(state = initialState, action) {
             break;
         case DECREMENT_COUNTER:
             newState.value = state.value - 1;
+            break;
+        case INIT_COUNTER:
+            newState.value = action.payload;
             break;
     }
 

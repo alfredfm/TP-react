@@ -19,7 +19,7 @@ function getConfigurations (host) {
   switch (host) {
     case "development.fr", "localhost":
       confs = {
-        URL_API: "http://development.fr/api",
+        URL_API: "http://localhost/api",
         FAVICON: '/logo.png',
         TITLE: 'Reporting',
         META_NAME_CONTENT: '#000',
@@ -42,7 +42,7 @@ function getConfigurations (host) {
       break;
     default:
       confs = {
-        URL_API: "http://development.fr/api",
+        URL_API: "http://localhost/api",
         FAVICON: '/logo.png',
         TITLE: 'Reporting',
         META_NAME_CONTENT: '#000',

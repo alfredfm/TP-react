@@ -1,5 +1,7 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+
 use App\Core\APIApplication;
 
 require('./autoload.php');

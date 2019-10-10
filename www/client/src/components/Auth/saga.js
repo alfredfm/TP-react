@@ -1,6 +1,4 @@
-import { call, put, take, takeLatest } from 'redux-saga/effects';
-import axios from 'axios';
-import qs from 'qs';
+import { call, put, takeLatest } from 'redux-saga/effects';
 import { auth } from './api';
 
 // register
